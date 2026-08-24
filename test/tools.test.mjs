@@ -126,9 +126,13 @@ test('every tool carries a description', live, async () => {
 });
 
 test('the key is accepted by HasData', live, async () => {
+    // Compute the dates at run time. A hardcoded future date silently becomes a past date and
+    // then Booking.com rejects the check-in, turning this canary red for the wrong reason.
+    const checkInDate = new Date(Date.now() + 30 * 86_400_000).toISOString().slice(0, 10);
+    const checkOutDate = new Date(Date.now() + 33 * 86_400_000).toISOString().slice(0, 10);
     const { raw } = await rpc('tools/call', {
         name: 'hasdata_booking_search_getBookingSearchResults',
-        arguments: { keyword: 'Paris', checkInDate: '2026-09-15', checkOutDate: '2026-09-18', rooms: 1, adults: 2, children: 0 },
+        arguments: { keyword: 'Paris', checkInDate, checkOutDate, rooms: 1, adults: 2, children: 0 },
     });
     assert.ok(!raw.includes('401 Unauthorized'), 'HasData rejected the key');
     assert.ok(!raw.includes('"isError":true'), `the tool call failed: ${raw.slice(0, 300)}`);
