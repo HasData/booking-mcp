@@ -1,16 +1,41 @@
 {
   "name": "@hasdata/booking-mcp",
   "mcpName": "com.hasdata/booking",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for Booking.com through HasData's hosted API: search stays by destination and dates, and read a single property in full. No Booking.com account.",
   "type": "module",
-  "bin": { "hasdata-booking-mcp": "index.mjs" },
-  "files": ["index.mjs", "README.md", "LICENSE"],
-  "scripts": { "test": "node --test" },
-  "dependencies": { "mcp-remote": "^0.1.43" },
-  "engines": { "node": ">=18" },
+  "bin": {
+    "hasdata-booking-mcp": "index.mjs"
+  },
+  "files": [
+    "index.mjs",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "mcp-remote": "^0.1.43"
+  },
+  "engines": {
+    "node": ">=18"
+  },
   "license": "MIT",
-  "repository": { "type": "git", "url": "https://github.com/HasData/booking-mcp.git" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HasData/booking-mcp.git"
+  },
   "homepage": "https://hasdata.com/apis/booking-api",
-  "keywords": ["mcp", "booking", "booking-com", "booking-mcp", "hotels", "travel", "model-context-protocol", "hasdata", "scraper"]
+  "keywords": [
+    "mcp",
+    "booking",
+    "booking-com",
+    "booking-mcp",
+    "hotels",
+    "travel",
+    "model-context-protocol",
+    "hasdata",
+    "scraper"
+  ]
 }

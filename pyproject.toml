@@ -1,6 +1,6 @@
 [project]
 name = "hasdata-booking-mcp"
-version = "1.0.0"
+version = "1.0.1"
 description = "MCP server for Booking.com through HasData's hosted API. No Booking.com account."
 readme = "README.md"
 requires-python = ">=3.10"
