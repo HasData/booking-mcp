@@ -2,7 +2,7 @@
   "name": "@hasdata/booking-mcp",
   "mcpName": "com.hasdata/booking",
   "version": "1.0.1",
-  "description": "MCP server for Booking.com through HasData's hosted API: search stays by destination and dates, and read a single property in full. No Booking.com account.",
+  "description": "MCP server for Booking.com through HasData's hosted API: search stays by destination and dates, and read a single property in full. 1,000 free credits every month.",
   "type": "module",
   "bin": {
     "hasdata-booking-mcp": "index.mjs"
