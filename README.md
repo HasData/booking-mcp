@@ -38,7 +38,7 @@ https://mcp.hasdata.com/api/mcp?apis=booking
 
 ## What you need
 
-An MCP client and a HasData API key from the [dashboard](https://app.hasdata.com/sign-up?utm_source=github&utm_medium=syndication&utm_campaign=booking-mcp), free to create with no card, and the trial covers 100 calls at the 10-credit rate. This is a remote server, so the simplest path is a URL and an `x-api-key` header, with no container to run. A client that only speaks stdio reaches it through a thin launcher, published as `@hasdata/booking-mcp` on npm and `hasdata-booking-mcp` on PyPI, shown below.
+An MCP client and a HasData API key from the [dashboard](https://app.hasdata.com/sign-up?utm_source=github&utm_medium=syndication&utm_campaign=booking-mcp), free to create with no card, and the free tier covers 100 calls a month at the 10-credit rate. This is a remote server, so the simplest path is a URL and an `x-api-key` header, with no container to run. A client that only speaks stdio reaches it through a thin launcher, published as `@hasdata/booking-mcp` on npm and `hasdata-booking-mcp` on PyPI, shown below.
 
 ## Quick start
 
