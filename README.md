@@ -176,10 +176,10 @@ The property tool needs the same dates and guest counts as the search, because a
 
 ## Tools
 
-| Tool | Credits | What it returns |
-| :--- | :--- | :--- |
-| `hasdata_booking_place_getBookingPlaceDetails` | 10 | The property identity (hotelId, title, address, coordinates), policies (free cancellation, no prepayment, child/pet stays), price, rating and review summary, photos, and… |
-| `hasdata_booking_search_getBookingSearchResults` | 10 | Each hotel's `hotelId`, title and Booking URL, location info (city, address, coordinates, distance to center / nearest beach), policies (free cancellation, no… |
+| Tool | What it returns |
+| --- | --- |
+| `hasdata_booking_place_getBookingPlaceDetails` | The property identity (hotelId, title, address, coordinates), policies (free cancellation, no prepayment, child/pet stays), price, rating and review summary, photos, and…. 10 credits a call |
+| `hasdata_booking_search_getBookingSearchResults` | Each hotel's `hotelId`, title and Booking URL, location info (city, address, coordinates, distance to center / nearest beach), policies (free cancellation, no…. 10 credits a call |
 
 Two tools, read-only. Samples below are trimmed from real calls, and prices move constantly. Read them as shapes. Each tool name links to its endpoint reference, which carries the full field list.
 
