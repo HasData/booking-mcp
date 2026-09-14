@@ -176,6 +176,11 @@ The property tool needs the same dates and guest counts as the search, because a
 
 ## Tools
 
+| Tool | Credits | What it returns |
+| :--- | :--- | :--- |
+| `hasdata_booking_place_getBookingPlaceDetails` | 10 | The property identity (hotelId, title, address, coordinates), policies (free cancellation, no prepayment, child/pet stays), price, rating and review summary, photos, and… |
+| `hasdata_booking_search_getBookingSearchResults` | 10 | Each hotel's `hotelId`, title and Booking URL, location info (city, address, coordinates, distance to center / nearest beach), policies (free cancellation, no… |
+
 Two tools, read-only. Samples below are trimmed from real calls, and prices move constantly. Read them as shapes. Each tool name links to its endpoint reference, which carries the full field list.
 
 The samples are the payload, not the whole response. A `tools/call` result carries one text block, and that text is itself JSON holding `url`, `status`, `text` and `json`, with the scraped data under `json`. From a raw JSON-RPC response the path is `result.content[0].text`, parsed, then `.json`. A chat client unwraps that for you and code talking to the endpoint directly does not.
