@@ -277,9 +277,9 @@ Each Booking.com tool costs **10 credits per successful call**. Response size do
 
 The free tier is **1,000 credits every month with no card**, which is 100 Booking.com calls. It renews with the billing cycle, so a low-volume agent runs on the free tier indefinitely.
 
-Paid plans start at **$49 a month** for 200,000 credits, which is 20,000 calls. The unit price falls with volume, from **$2.45 per 1,000 calls** on the entry plan to **$0.99** on Business, **$0.83** on Growth and **$0.75** on the largest [high-volume plans](https://hasdata.com/prices?utm_source=github&utm_medium=syndication&utm_campaign=booking-mcp).
+Paid plans start at **$59 a month** for 200,000 credits, which is 20,000 calls. The unit price falls with volume, from **$2.95 per 1,000 calls** on the entry plan to **$1.19** on Basic and **$0.83** across the Growth tiers. Current figures live on the [pricing page](https://hasdata.com/prices?utm_source=github&utm_medium=syndication&utm_campaign=booking-mcp).
 
-Your plan also sets concurrency. The free tier allows 1 request at a time, Startup 15, Business 30, Growth 50, and the high-volume plans run from 200 to 1,500. Handle the overflow case defensively in anything unattended.
+Your plan also sets concurrency. The free tier allows 1 request at a time, Startup 5, Basic 15, and the Growth tiers run from 50 to 500. Handle the overflow case defensively in anything unattended.
 
 A request that comes back non-200 is not billed. A successful call that finds nothing is still a call.
 
