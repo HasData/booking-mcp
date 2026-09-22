@@ -1,0 +1,34 @@
+---
+description: How to pull Booking.com hotel search and property details through the HasData MCP server
+alwaysApply: false
+---
+
+# Booking.com through HasData
+
+Two tools, and both demand a full stay. `hasdata_booking_search_getBookingSearchResults` needs `keyword`, `checkInDate`, `checkOutDate`, `rooms`, `adults` and `children`. `hasdata_booking_place_getBookingPlaceDetails` needs the same six with the property `url` in place of the keyword.
+
+There is no way to ask what a hotel costs in general. Every answer belongs to a date range and a party.
+
+## Narrowing
+
+`sort` orders the set and `price_min_` and `price_max_` bound it. `bedrooms` and `bathrooms` set minimum counts on any property rather than filtering to apartments.
+
+`language` changes how the answer is written. `currency` normally does too, but a price band is read in the selected currency, so with `price_min_` or `price_max_` set it also changes which properties come back.
+
+`children` and `childrenAges` travel together. Booking prices a child by age, so a count without ages returns a different set than the guest would see.
+
+## Two scores that look alike
+
+`rating` is the official star rating, so it runs to 5. `reviews.score` is the guest score, so it runs to 10, alongside `reviews.count` and a `secondaryScore` for a single topic such as location. A summary that treats a 3 and a 9.4 as the same scale is nonsense.
+
+## Reading the price
+
+The keys carry suffixes. `pricePerStayRaw` is the string and `pricePerStayParsed` the number, and the same pattern holds for the rest.
+
+`pricePerStayParsed` is not what the guest pays. Most results also carry `excludedChargesParsed`, the part Booking bills on arrival, so the real total is the two added together. Test for it, because a result can omit the pair, and a missing pair means nothing was parsed rather than that the charges are zero.
+
+A discount pair appears only when the property is discounted, and the API spells it `dicsountRaw` and `dicsountParsed`. Code that reads `discount` gets nothing and reports no discount.
+
+A destination and a window with nothing open returns a successful result with an empty `results` array. Say the dates are full rather than reporting the place as missing.
+
+Each successful call spends credits, so search once with the filters set rather than pulling everything and sorting afterwards.
