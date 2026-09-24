@@ -3,7 +3,7 @@
   "name": "com.hasdata/booking",
   "title": "HasData Booking.com",
   "description": "Booking.com stays by destination and dates, and full property details, as structured JSON.",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "websiteUrl": "https://hasdata.com/apis/booking-api",
   "repository": {
     "url": "https://github.com/HasData/booking-mcp",
@@ -27,7 +27,7 @@
     {
       "registryType": "npm",
       "identifier": "@hasdata/booking-mcp",
-      "version": "1.0.7",
+      "version": "1.0.8",
       "transport": {
         "type": "stdio"
       },
@@ -43,7 +43,7 @@
     {
       "registryType": "pypi",
       "identifier": "hasdata-booking-mcp",
-      "version": "1.0.7",
+      "version": "1.0.8",
       "runtimeHint": "uvx",
       "transport": {
         "type": "stdio"
