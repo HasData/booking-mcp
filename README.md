@@ -16,6 +16,7 @@ https://mcp.hasdata.com/mcp?apis=booking
 [![tool contract](https://github.com/HasData/booking-mcp/actions/workflows/contract.yml/badge.svg)](https://github.com/HasData/booking-mcp/actions/workflows/contract.yml)
 [![MCP](https://img.shields.io/badge/MCP-remote%20%7C%20streamable%20HTTP-6366f1?style=flat-square)](https://modelcontextprotocol.io)
 [![Tools](https://img.shields.io/badge/tools-2-10b981?style=flat-square)](#tools)
+- [Prompts and resources](#prompts-and-resources)
 [![npm](https://img.shields.io/npm/v/@hasdata/booking-mcp?style=flat-square&logo=npm&label=npm&color=cb3837)](https://www.npmjs.com/package/@hasdata/booking-mcp)
 [![PyPI](https://img.shields.io/pypi/v/hasdata-booking-mcp?style=flat-square&logo=pypi&logoColor=white&label=PyPI&color=3775a9)](https://pypi.org/project/hasdata-booking-mcp/)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
@@ -254,6 +255,31 @@ Returns the page as sections rather than one flat object: `overview` (`id`, `tit
   ]
 }
 ```
+
+## Prompts and resources
+
+The server exposes 16 resources, one per parameter whose accepted values are a fixed list. Reading one is cheaper than learning the vocabulary from a rejected call, and it costs no credits. Each URI is `hasdata://booking/<parameter>`.
+
+| Parameter | Values | What it selects |
+| --- | ---: | --- |
+| `language` | 45 | Language of the Booking.com interface and localized fields in the response. |
+| `currency` | 52 | Currency of the prices returned in the response. Use `hotelCurrency` to keep each property's native currency. |
+| `sort` | 10 | Sort order applied by Booking.com to the results page. |
+| `propertyType__` | 8 | Filter by property type. Multiple values are combined with OR. |
+| `rating__` | 5 | Filter by official star rating. Multiple values are combined with OR. |
+| `reviewScore__` | 4 | Filter by minimum guest review score bucket. Multiple values are combined with OR. |
+| `distanceFromCenter__` | 3 | Filter by distance from the destination center. Multiple values are combined with OR. |
+| `propertyAccessibility__` | 7 | Filter by property-level accessibility features. Multiple values are combined with OR. |
+| `meals__` | 2 | Filter by available meal plans. Multiple values are combined with OR. |
+| `facilities__` | 13 | Filter by property-level facilities. Multiple values are combined with OR. |
+| `roomFacilities__` | 25 | Filter by in-room facilities. Multiple values are combined with OR. |
+| `roomAccessibility__` | 11 | Filter by in-room accessibility features. Multiple values are combined with OR. |
+| `bedPreference__` | 2 | Filter by bed configuration. Multiple values are combined with OR. |
+| `reservationPolicy__` | 2 | Filter by reservation flexibility. Multiple values are combined with OR. |
+| `onlinePayment__` | 1 | Filter by online payment options. |
+| `travelGroup__` | 2 | Filter by travel-group oriented stay options. Multiple values are combined with OR. |
+
+The list is served without an API key, so a client can read it before a user has signed up.
 
 ## Errors and failure paths
 
