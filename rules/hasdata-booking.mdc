@@ -27,7 +27,7 @@ The keys carry suffixes. `pricePerStayRaw` is the string and `pricePerStayParsed
 
 `pricePerStayParsed` is not what the guest pays. Most results also carry `excludedChargesParsed`, the part Booking bills on arrival, so the real total is the two added together. Test for it, because a result can omit the pair, and a missing pair means nothing was parsed rather than that the charges are zero.
 
-A discount pair appears only when the property is discounted, and the API spells it `dicsountRaw` and `dicsountParsed`. Code that reads `discount` gets nothing and reports no discount.
+A discount pair appears only when the property is discounted, and it is spelled `discountRaw` and `discountParsed`. Earlier releases misspelled it as `dicsount*`, so code written against that spelling now reads nothing and reports no discount.
 
 A destination and a window with nothing open returns a successful result with an empty `results` array. Say the dates are full rather than reporting the place as missing.
 

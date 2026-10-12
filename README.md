@@ -208,7 +208,7 @@ The reference documents the full filter set, including distance, meals, accessib
 
 Returns `searchInformation`, a `results` array, and `pagination` with `page`, `totalResults` and `totalPages`. Each result carries `hotelId`, `title`, `url`, the offered `room` and `bedTypes`, a `location` object, a `policies` object, a `price` object, the star `rating`, a `reviews` object with `score`, `count` and a text label, and a `photo`.
 
-> The discount field in `price` is spelled `dicsount` (`dicsountRaw` and `dicsountParsed`), which mirrors the upstream key. Read that spelling, not `discount`. Also note `rating` is the official star rating while `reviews.score` is the guest score out of 10, two different numbers.
+> The discount pair in `price` is `discountRaw` and `discountParsed`. Earlier releases misspelled it as `dicsountRaw` and `dicsountParsed`, and that spelling is gone, so code written against it reads nothing. Also note `rating` is the official star rating while `reviews.score` is the guest score out of 10, two different numbers.
 
 ```json
 {
@@ -218,7 +218,7 @@ Returns `searchInformation`, a `results` array, and `pagination` with `page`, `t
   "room": "Comfort Double Room",
   "location": { "city": "Paris", "address": "5 rue Linné", "mainDistance": "0.9 miles from downtown", "centrallyLocated": true },
   "policies": { "freeCancellation": true, "noPrepayment": true },
-  "price": { "pricePerStayParsed": 451.36, "priceBeforeDiscountParsed": 885.03, "dicsountParsed": 433.66, "currency": "USD" },
+  "price": { "pricePerStayParsed": 451.36, "priceBeforeDiscountParsed": 885.03, "discountParsed": 433.66, "currency": "USD" },
   "rating": 3,
   "reviews": { "score": 7.5, "count": 1721, "text": "Good" }
 }
