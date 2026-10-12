@@ -32,3 +32,7 @@ A discount pair appears only when the property is discounted, and it is spelled 
 A destination and a window with nothing open returns a successful result with an empty `results` array. Say the dates are full rather than reporting the place as missing.
 
 Each successful call spends credits, so search once with the filters set rather than pulling everything and sorting afterwards.
+
+## Prompts and resources
+
+The server also serves resources that spell out the accepted values of every parameter that takes a fixed list, each one at `hasdata://booking/<parameter>`. Reading one spends no credits and makes no upstream request, which beats discovering the vocabulary from a rejected call. Listing them needs no API key either, so a client can read them before the user has connected an account.
