@@ -375,7 +375,7 @@ HasData accesses publicly available data only. A platform's terms may restrict a
 | :--- | :--- |
 | Product page and request builder | [Booking.com Scraper API](https://hasdata.com/apis/booking-api?utm_source=github&utm_medium=syndication&utm_campaign=booking-mcp) |
 | Server documentation | [MCP server docs](https://docs.hasdata.com/mcp-server?utm_source=github&utm_medium=syndication&utm_campaign=booking-mcp) |
-| All 57 tools in one server | [HasData/hasdata-mcp](https://github.com/HasData/hasdata-mcp) |
+| Every HasData tool in one server | [HasData/hasdata-mcp](https://github.com/HasData/hasdata-mcp) |
 | Client walkthroughs | [MCP clients and integrations](https://hasdata.com/integrations/mcp?utm_source=github&utm_medium=syndication&utm_campaign=booking-mcp) |
 | Everything else we scrape | [Booking.com Scraper API and 54 more](https://hasdata.com/apis/?utm_source=github&utm_medium=syndication&utm_campaign=booking-mcp) |
 | Plans and credit costs | [Plans and credit costs](https://hasdata.com/prices?utm_source=github&utm_medium=syndication&utm_campaign=booking-mcp) |
